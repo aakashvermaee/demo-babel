@@ -1,4 +1,3 @@
-/* eslint-disable require-jsdoc */
 import Users from '../controllers/users.controller';
 
 export default function(fastify, opts, done) {
