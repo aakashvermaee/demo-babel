@@ -1,0 +1,30 @@
+{
+  "name": "demo-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist --verbose --delete-dir-on-start",
+    "jsdoc": "jsdoc -r src",
+    "lint:fix": "./node_modules/.bin/eslint --fix src",
+    "prestart": "npm run lint:fix && npm run build",
+    "start": "node dist/index.js",
+    "dev": "sh ./bin/run_dev.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "eslint": "^6.7.2",
+    "eslint-config-google": "^0.14.0",
+    "jsdoc": "^3.6.3",
+    "nodemon": "^2.0.2",
+    "onchange": "^6.1.0"
+  },
+  "dependencies": {
+    "fastify": "^2.11.0"
+  }
+}
